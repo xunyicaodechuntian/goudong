@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+   
+    <meta id="vp" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+
+
+    <title>goudong</title>
+
+  </head>
+  <body style="font-size: 0.4rem;">
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+    <script type="text/javascript">
+        // 把尺寸放大N倍（N是window.devicePixelRatio）
+         // 把屏幕的倍率缩小到N分之一（N是window.devicePixelRatio）
+        var scale = 1/window.devicePixelRatio;
+        var mstr = 'initial-scale='+ scale +', maximum-scale='+ scale +', minimum-scale='+ scale +', user-scalable=no';
+
+        document.getElementById("vp").content = mstr;
+        
+
+        
+        document.getElementsByTagName("html")[0].style.fontSize = 100*document.documentElement.clientWidth/750 + "px";
+
+
+       
+        
+    </script>
+  </body>
+</html>
